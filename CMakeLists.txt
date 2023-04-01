@@ -22,7 +22,6 @@ add_subdirectory(tests)
 
 configure_file(${CMAKE_CURRENT_LIST_DIR}/src/meep/meep-config.h.in ${CMAKE_CURRENT_LIST_DIR}/src/meep/meep-config.h)
 
-configure_file(${CMAKE_CURRENT_LIST_DIR}/meep-pkconfig.in ${CMAKE_CURRENT_LIST_DIR}/meep-pkgconfig)
 
 
 
