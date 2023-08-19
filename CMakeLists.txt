@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.2)
 project(Meep 1.0)
 
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 execute_process(COMMAND ./version.sh 1.27.0-beta
 RESULT_VARIABLE MEEP_VERSION
 WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
