@@ -4,15 +4,17 @@ project(Meep 1.0)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-execute_process(COMMAND ./version.sh 1.27.0-beta
+execute_process(COMMAND ./version.sh 1.28.0-beta
 RESULT_VARIABLE MEEP_VERSION
 WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
 )
 
-set(SHARED_VERSION_INFO "31:0:0")
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 
-
+set(SHARED_VERSION_INFO "32:0:0")
 add_subdirectory(src)
+
+
 add_subdirectory(tests)
 
 configure_file(${CMAKE_CURRENT_LIST_DIR}/src/meep/meep-config.h.in ${CMAKE_CURRENT_LIST_DIR}/src/meep/meep-config.h)
